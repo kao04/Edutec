@@ -1,210 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecologia - EcoSeed</title>
     <link rel="stylesheet" href="style.css">
-
-    <title>Ecologia</title>
+    
 </head>
 
 <body>
     <header>
-        <img src="" alt="Logo">
-
-        <nav>
-            <a href="">Filmes</a>
-            <a href="">Extras</a>
-            <a href="">Sobre nós</a>
-
-            <button onclick="registrar()">Registre-se agora <img src="" alt="->"></button>
-        </nav>
+        <div class="container">
+            <div class="logo">EcoSeed</div>
+            <nav>
+                <a href="">Filmes</a>
+                <a href="">Extras</a>
+                <a href="">Sobre nós</a>
+                <button class="register-btn" onclick="registrar()">Registre-se agora <i class="fas fa-arrow-right"></i></button>
+            </nav>
+        </div>
     </header>
 
     <section class="carrossel">
-        <div>
+        <div class="container">
             <div>
                 <h1>Conhecimento que germina consciência e <span>cultiva mudanças</span></h1>
                 <p>EcoSeed: Plantando a semente do conhecimento ecológico no coração de quem transforma o futuro.</p>
                 <button onclick="registrar()">Register</button>
             </div>
-            <img src="./imgs/Cooperação Global em Progresso Ambiental.png" alt="">
+            <img src="imgs/Cooperação Global em Progresso Ambiental.png" alt="Cooperação Global em Progresso Ambiental">
         </div>
     </section>
 
     <section class="nossosObjetivos">
-        <strong>🌱 Nossos Objetivos</strong>
-        <p>Plantando ideias, cultivando soluções para os desafios ecológicos.</p>
+        <div class="container">
+            <strong>🌱 Nossos Objetivos</strong>
+            <p>Plantando ideias, cultivando soluções para os desafios ecológicos.</p>
 
-        <div class="Objetivos">
+            <div class="Objetivos">
+                <div class="consciencia">
+                    <i class="fas fa-users" style="font-size: 24px; color: #4CAF50;"></i>
+                    <strong>Consciência Ecológica</strong>
+                    <p>Estimular o pensamento crítico sobre os impactos ambientais e mudanças climáticas.</p>
+                </div>
 
-            <div class="consciencia">
-                <img src="" alt="pessoas">
-                <strong>Consciência Ecológica</strong>
-                <p>Estimular o pensamento crítico sobre os impactos ambientais e mudanças climáticas.</p>
-            </div>
+                <div class="pratica">
+                    <i class="fas fa-building" style="font-size: 24px; color: #FFC107;"></i>
+                    <strong>Prática Sustentável</strong>
+                    <p>Promover o uso de energias limpas e a importância da reciclagem no dia a dia.</p>
+                </div>
 
-            <div class="pratica">
-                <img src="" alt="predio">
-                <strong>Prática Sustentável</strong>
-                <p>Promover o uso de energias limpas e a importância da reciclagem no dia a dia.</p>
-            </div>
-
-            <div class="apoio">
-                <img src="" alt="mãos">
-                <strong>Apoio Acadêmico</strong>
-                <p>Oferecer conteúdos que auxiliem no estudo e aprofundamento da ecologia.</p>
+                <div class="apoio">
+                    <i class="fas fa-hands-helping" style="font-size: 24px; color: #0288D1;"></i>
+                    <strong>Apoio Acadêmico</strong>
+                    <p>Oferecer conteúdos que auxiliem no estudo e aprofundamento da ecologia.</p>
+                </div>
             </div>
         </div>
     </section>
+
     <section class="oqeecologia">
-        <div>
-            <img src="" alt="">
-            <div class="oqeecologia">
+        <div class="container">
+            <img src="https://placehold.co/500x350/4CAF50/FFFFFF?text=Ecologia" alt="Ecologia">
+            <div>
                 <strong>O que é ecologia?</strong>
-                <p>A ecologia é a ciência que estuda as relações entre os seres vivos e o ambiente. Ela analisa como os
-                    organismos interagem entre si e com os elementos naturais, buscando entender o funcionamento dos
-                    ecossistemas. Esse conhecimento é essencial para enfrentar desafios como as mudanças climáticas, a
-                    perda da biodiversidade e a escassez de recursos. Estudar ecologia é fundamental para construir um
-                    futuro mais sustentável e consciente.</p>
+                <p>A ecologia é a ciência que estuda as relações entre os seres vivos e o ambiente. Ela analisa como os organismos interagem entre si e com os elementos naturais, buscando entender o funcionamento dos ecossistemas. Esse conhecimento é essencial para enfrentar desafios como as mudanças climáticas, a perda da biodiversidade e a escassez de recursos. Estudar ecologia é fundamental para construir um futuro mais sustentável e consciente.</p>
                 <button onclick="saibaMais()">Saiba mais</button>
             </div>
         </div>
     </section>
 
-    <section>
-        <div>
+    <section class="facts-section">
+        <div class="container">
             <div>
                 <strong>O pulso do planeta em <span>fatos e impactos</span></strong>
                 <p>O cenário ambiental em dados reais.</p>
             </div>
-            <div>
-                <strong><img src="" alt="pessoas">14.000.000</strong>
+            <div class="fact-box">
+                <strong><i class="fas fa-users"></i>14.000.000</strong>
                 <p>Movimento Jovem</p>
                 <p>Mobilização de milhões de estudantes através do movimento Fridays Future em defesa do clima.</p>
             </div>
-            <div>
-                <strong><img src="" alt="mãos">3,000</strong>
+            <div class="fact-box">
+                <strong><i class="fas fa-hands-helping"></i>3,000</strong>
                 <p>Mobilização Acadêmica</p>
                 <p>Mais de 3.000 clubes universitários que promovem educação ambiental e sustentabilidade.</p>
             </div>
-            <div><strong><img src="" alt="dedo">190</strong>
+            <div class="fact-box">
+                <strong><i class="fas fa-hand-point-up"></i>190</strong>
                 <p>Ação Global</p>
                 <p>A COP28 foi maior conferência climática do mundo reunindo 190 países para decisões ambientais.</p>
             </div>
-            <div><strong><img src="" alt="pessoas">4,3 trilhões</strong>
+            <div class="fact-box">
+                <strong><i class="fas fa-globe-americas"></i>4,3 trilhões</strong>
                 <p>Custo Ambiental</p>
                 <p>Prejuízo anual causado pela degradação ambiental na economia global.</p>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Conteúdos</h2>
+    <section class="content-section">
+        <div class="container">
+            <h2>Conteúdos</h2>
+            <strong>Disponiveis em nosso site para você aprender mais sobre <span>Ecologia</span></strong>
 
-        <strong>Disponiveis em nosso site para você aprender mais sobre <span>Ecologia</span></strong>
-
-        <div class="geral">
-            <div>
-                <img src="" alt="">
-                <strong>Mudanças Climáticas </strong>
-                <button>Acessar</button>
-            </div>
-            <div>
-                <img src="" alt="">
-                <strong>Reciclagem</strong>
-                <button>Acessar</button>
-            </div>
-            <div>
-                <img src="" alt="">
-                <strong>Ecossistema</strong>
-                <button>Acessar</button>
-            </div>
-            <div>
-                <img src="" alt="">
-                <strong>Energias Renováveis</strong>
-                <button>Acessar</button>
+            <div class="geral">
+                <div>
+                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Mudanças+Climáticas" alt="Mudanças Climáticas">
+                    <strong>Mudanças Climáticas</strong>
+                    <button>Acessar</button>
+                </div>
+                <div>
+                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Reciclagem" alt="Reciclagem">
+                    <strong>Reciclagem</strong>
+                    <button>Acessar</button>
+                </div>
+                <div>
+                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Ecossistema" alt="Ecossistema">
+                    <strong>Ecossistema</strong>
+                    <button>Acessar</button>
+                </div>
+                <div>
+                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Energias+Renováveis" alt="Energias Renováveis">
+                    <strong>Energias Renováveis</strong>
+                    <button>Acessar</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <div>
-        <img src="" alt="">
-        <div>
-            <p>“Podemos julgar o coração de um homem pelaforma como ele trata os animais"</p>
-            <span>— Immanuel Kant.</span>
-        </div>
-    </div>
-
-    <section>
-        <h2>DESENVOLVEDORES</h2>
-        <div>
+    <section class="quote-section">
+        <div class="container">
+            <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=K" alt="Immanuel Kant">
             <div>
-                <img src="" alt="">
-                <strong>Julya Karoline</strong>
-                <p>Editora Chefe - @eu.juhxss</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <strong>Kalebe Sant’Ana</strong>
-                <p>@kalebesant.ana</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <strong>Isabelli Lucena</strong>
-                <p>@isa.llucena</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <strong>Ricardo Yuji</strong>
-                <p>@yujimedeiros3</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <strong>Joanna Vitória</strong>
-                <p>@_joannavitoria</p>
+                <p>“Podemos julgar o coração de um homem pela forma como ele trata os animais"</p>
+                <span>— Immanuel Kant.</span>
             </div>
         </div>
     </section>
-    <section>
-        <strong>Missão ecológica ativada, clique e jogue!</strong>
-        <button>Jogar missão ecológica <img src="" alt="->"></button>
+
+    <section class="dev-section">
+        <div class="container">
+            <h2>DESENVOLVEDORES</h2>
+            <div>
+                <div>
+                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=J" alt="Julya Karoline">
+                    <strong>Julya Karoline</strong>
+                    <p>Editora Chefe - @eu.juhxss</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=K" alt="Kalebe Sant'Ana">
+                    <strong>Kalebe Sant'Ana</strong>
+                    <p>@kalebesant.ana</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=I" alt="Isabelli Lucena">
+                    <strong>Isabelli Lucena</strong>
+                    <p>@isa.llucena</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=R" alt="Ricardo Yuji">
+                    <strong>Ricardo Yuji</strong>
+                    <p>@yujimedeiros3</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=J" alt="Joanna Vitória">
+                    <strong>Joanna Vitória</strong>
+                    <p>@_joannavitoria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <strong>Missão ecológica ativada, clique e jogue!</strong>
+            <button>Jogar missão ecológica <i class="fas fa-arrow-right"></i></button>
+        </div>
     </section>
 
     <footer>
-        <!-- Logo + Descrição -->
-        <div class="footer-logo">
-          <h2>🌱 EcoSeed</h2>
-          <p>Feito em 2025, pelos alunos do 21ATI da Unasp - SP</p>
-          <p>Todos os direitos estão reservados</p>
-          <div class="social">
-            <a href="#"><i class="fa-brands fa-instagram"></i> IG</a>
-            <a href="#"><i class="fa-brands fa-dribbble"></i> DB</a>
-          </div>
-        </div>
-    
-        <!-- Comunidade -->
-        <div class="footer-column">
-          <h4>Comunidade</h4>
-          <a href="#">Sobre nós</a>
-          <a href="#">Entre em contato</a>
-        </div>
-    
-        <!-- Suporte -->
-        <div class="footer-column">
-          <h4>Suporte</h4>
-          <a href="#">Centro de ajuda</a>
-          <a href="#">Perguntas frequentes</a>
-        </div>
-    
-        <!-- Newsletter -->
-        <div class="footer-column newsletter">
-          <h4>Mantenha-se atualizado</h4>
-          <input type="email" placeholder="Digite seu e-mail...">
-          <button>Enviar</button>
-        </div>
-      </footer>
-</body>
+        <div class="container">
+            <!-- Logo + Descrição -->
+            <div class="footer-logo">
+                <h2>🌱 EcoSeed</h2>
+                <p>Feito em 2025, pelos alunos do 21ATI da Unasp - SP</p>
+                <p>Todos os direitos estão reservados</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i> IG</a>
+                    <a href="#"><i class="fab fa-dribbble"></i> DB</a>
+                </div>
+            </div>
 
+            <!-- Comunidade -->
+            <div class="footer-column">
+                <h4>Comunidade</h4>
+                <a href="#">Sobre nós</a>
+                <a href="#">Entre em contato</a>
+            </div>
+
+            <!-- Suporte -->
+            <div class="footer-column">
+                <h4>Suporte</h4>
+                <a href="#">Centro de ajuda</a>
+                <a href="#">Perguntas frequentes</a>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-column newsletter">
+                <h4>Mantenha-se atualizado</h4>
+                <input type="email" placeholder="Digite seu e-mail...">
+                <button>Enviar</button>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
