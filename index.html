@@ -1,218 +1,251 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecologia - EcoSeed</title>
+    <title>EcoSeed - Conhecimento que germina consciência</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
+
+    <header class="header">
         <div class="container">
-            <div class="logo">EcoSeed</div>
-            <nav>
-                <a href="">Filmes</a>
-                <a href="">Extras</a>
-                <a href="">Sobre nós</a>
-                <button class="register-btn" onclick="registrar()">Registre-se agora <i class="fas fa-arrow-right"></i></button>
+            <a href="#" class="logo">
+                <img src="https://img.icons8.com/ios-filled/50/40C057/leaf.png" alt="Folha Verde" class="logo-icon">
+                <span>EcoSeed</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Causas</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                </ul>
             </nav>
+            <a href="#" class="btn btn-primary">Registre-se aqui</a>
         </div>
     </header>
 
-    <section class="carrossel">
-        <div class="container">
-            <div>
-                <h1>Conhecimento que germina consciência e <span>cultiva mudanças</span></h1>
-                <p>EcoSeed: Plantando a semente do conhecimento ecológico no coração de quem transforma o futuro.</p>
-                <button onclick="registrar()">Register</button>
-            </div>
-            <img src="imgs/Cooperação Global em Progresso Ambiental.png" alt="Cooperação Global em Progresso Ambiental">
-        </div>
-    </section>
-
-    <section class="nossosObjetivos">
-        <div class="container">
-            <strong>🌱 Nossos Objetivos</strong>
-            <p>Plantando ideias, cultivando soluções para os desafios ecológicos.</p>
-
-            <div class="Objetivos">
-                <div class="consciencia">
-                    <i class="fas fa-users" style="font-size: 24px; color: #4CAF50;"></i>
-                    <strong>Consciência Ecológica</strong>
-                    <p>Estimular o pensamento crítico sobre os impactos ambientais e mudanças climáticas.</p>
+    <main>
+        <section class="hero-section">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <h1>Conhecimento que <span class="text-green">germina</span></h1>
+                    <h2>consciência e <span class="text-green">cultiva mudanças</span></h2>
+                    <a href="#" class="btn btn-secondary">Começar</a>
                 </div>
-
-                <div class="pratica">
-                    <i class="fas fa-building" style="font-size: 24px; color: #FFC107;"></i>
-                    <strong>Prática Sustentável</strong>
-                    <p>Promover o uso de energias limpas e a importância da reciclagem no dia a dia.</p>
-                </div>
-
-                <div class="apoio">
-                    <i class="fas fa-hands-helping" style="font-size: 24px; color: #0288D1;"></i>
-                    <strong>Apoio Acadêmico</strong>
-                    <p>Oferecer conteúdos que auxiliem no estudo e aprofundamento da ecologia.</p>
+                <div class="hero-image">
+                    <img src="https://i.imgur.com/gReA2tB.png" alt="Ilustração de pessoas cuidando do planeta Terra">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="oqeecologia">
-        <div class="container">
-            <img src="https://placehold.co/500x350/4CAF50/FFFFFF?text=Ecologia" alt="Ecologia">
-            <div>
-                <strong>O que é ecologia?</strong>
-                <p>A ecologia é a ciência que estuda as relações entre os seres vivos e o ambiente. Ela analisa como os organismos interagem entre si e com os elementos naturais, buscando entender o funcionamento dos ecossistemas. Esse conhecimento é essencial para enfrentar desafios como as mudanças climáticas, a perda da biodiversidade e a escassez de recursos. Estudar ecologia é fundamental para construir um futuro mais sustentável e consciente.</p>
-                <button onclick="saibaMais()">Saiba mais</button>
+        <section class="objectives-section">
+            <div class="container">
+                <div class="section-title">
+                    <img src="https://img.icons8.com/ios/30/40C057/natural-food.png" alt="Ícone de folha" class="title-icon">
+                    <h3>Nossos Objetivos</h3>
+                </div>
+                <div class="objectives-grid">
+                    <div class="objective-card">
+                        <img src="https://i.imgur.com/kY8P8fJ.png" alt="Cérebro com folha">
+                        <h4>Conhecimento Abrangente</h4>
+                        <p>Aprenda sobre ecologia, mudanças climáticas e o impacto de suas ações no planeta.</p>
+                    </div>
+                    <div class="objective-card">
+                        <img src="https://i.imgur.com/gK2J2pQ.png" alt="Mãos segurando broto">
+                        <h4>Prática Sustentável</h4>
+                        <p>Incentivamos a aplicação de práticas sustentáveis no seu dia a dia para um futuro mais verde.</p>
+                    </div>
+                    <div class="objective-card">
+                        <img src="https://i.imgur.com/fL3s4xP.png" alt="Prédio governamental">
+                        <h4>Ajuda Governamental</h4>
+                        <p>Informamos sobre políticas e incentivos governamentais que apoiam a sustentabilidade.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="facts-section">
-        <div class="container">
-            <div>
-                <strong>O pulso do planeta em <span>fatos e impactos</span></strong>
-                <p>O cenário ambiental em dados reais.</p>
+        <section class="ecology-section">
+            <div class="container ecology-layout">
+                <div class="ecology-image">
+                    <img src="https://i.imgur.com/W2d5wE3.png" alt="Ilustração de laboratório com plantas">
+                </div>
+                <div class="ecology-text">
+                    <h3>O que é Ecologia?</h3>
+                    <p>Ecologia é o estudo científico das interações dos organismos entre si e com o seu ambiente. Ela busca entender como os seres vivos afetam e são afetados pela natureza.</p>
+                    <a href="#" class="btn btn-secondary">Saiba mais</a>
+                </div>
             </div>
-            <div class="fact-box">
-                <strong><i class="fas fa-users"></i>14.000.000</strong>
-                <p>Movimento Jovem</p>
-                <p>Mobilização de milhões de estudantes através do movimento Fridays Future em defesa do clima.</p>
-            </div>
-            <div class="fact-box">
-                <strong><i class="fas fa-hands-helping"></i>3,000</strong>
-                <p>Mobilização Acadêmica</p>
-                <p>Mais de 3.000 clubes universitários que promovem educação ambiental e sustentabilidade.</p>
-            </div>
-            <div class="fact-box">
-                <strong><i class="fas fa-hand-point-up"></i>190</strong>
-                <p>Ação Global</p>
-                <p>A COP28 foi maior conferência climática do mundo reunindo 190 países para decisões ambientais.</p>
-            </div>
-            <div class="fact-box">
-                <strong><i class="fas fa-globe-americas"></i>4,3 trilhões</strong>
-                <p>Custo Ambiental</p>
-                <p>Prejuízo anual causado pela degradação ambiental na economia global.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="content-section">
-        <div class="container">
-            <h2>Conteúdos</h2>
-            <strong>Disponiveis em nosso site para você aprender mais sobre <span>Ecologia</span></strong>
-
-            <div class="geral">
-                <div>
-                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Mudanças+Climáticas" alt="Mudanças Climáticas">
-                    <strong>Mudanças Climáticas</strong>
-                    <button>Acessar</button>
+        <section class="stats-section">
+            <div class="container">
+                <div class="section-title">
+                    <h3>O grito do planeta em números</h3>
                 </div>
-                <div>
-                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Reciclagem" alt="Reciclagem">
-                    <strong>Reciclagem</strong>
-                    <button>Acessar</button>
-                </div>
-                <div>
-                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Ecossistema" alt="Ecossistema">
-                    <strong>Ecossistema</strong>
-                    <button>Acessar</button>
-                </div>
-                <div>
-                    <img src="https://placehold.co/300x180/4CAF50/FFFFFF?text=Energias+Renováveis" alt="Energias Renováveis">
-                    <strong>Energias Renováveis</strong>
-                    <button>Acessar</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="quote-section">
-        <div class="container">
-            <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=K" alt="Immanuel Kant">
-            <div>
-                <p>“Podemos julgar o coração de um homem pela forma como ele trata os animais"</p>
-                <span>— Immanuel Kant.</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="dev-section">
-        <div class="container">
-            <h2>DESENVOLVEDORES</h2>
-            <div>
-                <div>
-                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=J" alt="Julya Karoline">
-                    <strong>Julya Karoline</strong>
-                    <p>Editora Chefe - @eu.juhxss</p>
-                </div>
-                <div>
-                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=K" alt="Kalebe Sant'Ana">
-                    <strong>Kalebe Sant'Ana</strong>
-                    <p>@kalebesant.ana</p>
-                </div>
-                <div>
-                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=I" alt="Isabelli Lucena">
-                    <strong>Isabelli Lucena</strong>
-                    <p>@isa.llucena</p>
-                </div>
-                <div>
-                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=R" alt="Ricardo Yuji">
-                    <strong>Ricardo Yuji</strong>
-                    <p>@yujimedeiros3</p>
-                </div>
-                <div>
-                    <img src="https://placehold.co/100x100/4CAF50/FFFFFF?text=J" alt="Joanna Vitória">
-                    <strong>Joanna Vitória</strong>
-                    <p>@_joannavitoria</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <img src="https://i.imgur.com/c4Y2GfP.png" alt="Planeta">
+                        <span class="stat-number">14.690.906</span>
+                        <p>Espécies em risco de extinção</p>
+                    </div>
+                    <div class="stat-item">
+                        <img src="https://i.imgur.com/tYV6e3b.png" alt="Pino de mapa">
+                        <span class="stat-number">5.908</span>
+                        <p>Áreas de proteção em todo o mundo</p>
+                    </div>
+                    <div class="stat-item">
+                        <img src="https://i.imgur.com/zW7gJ5g.png" alt="Nuvem">
+                        <span class="stat-number">1 Bilhão</span>
+                        <p>De toneladas de CO2 lançados na atmosfera por ano</p>
+                    </div>
+                    <div class="stat-item">
+                        <img src="https://i.imgur.com/w9F3h5E.png" alt="Reciclagem">
+                        <span class="stat-number">2,3 Bilhões</span>
+                        <p>De toneladas de lixo reciclados por ano no mundo</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="mission-section">
-        <div class="container">
-            <strong>Missão ecológica ativada, clique e jogue!</strong>
-            <button>Jogar missão ecológica <i class="fas fa-arrow-right"></i></button>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <!-- Logo + Descrição -->
-            <div class="footer-logo">
-                <h2>🌱 EcoSeed</h2>
-                <p>Feito em 2025, pelos alunos do 21ATI da Unasp - SP</p>
-                <p>Todos os direitos estão reservados</p>
-                <div class="social">
-                    <a href="#"><i class="fab fa-instagram"></i> IG</a>
-                    <a href="#"><i class="fab fa-dribbble"></i> DB</a>
+        <section class="content-section">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Conteúdos</h3>
+                    <p>Disponibilizamos diversos temas para você mergulhar de cabeça em nosso universo.</p>
+                </div>
+                <div class="content-grid">
+                    <div class="content-card" style="background-image: url('https://i.imgur.com/3qH82y8.jpg');">
+                        <div class="card-overlay">
+                            <h4>Mudanças Climáticas</h4>
+                            <a href="#" class="btn btn-tertiary">Acessar</a>
+                        </div>
+                    </div>
+                    <div class="content-card" style="background-image: url('https://i.imgur.com/o2xH2zL.jpg');">
+                         <div class="card-overlay">
+                            <h4>Reciclagem</h4>
+                            <a href="#" class="btn btn-tertiary">Acessar</a>
+                        </div>
+                    </div>
+                    <div class="content-card" style="background-image: url('https://i.imgur.com/zY3qJ7V.jpg');">
+                         <div class="card-overlay">
+                            <h4>Sustentabilidade</h4>
+                            <a href="#" class="btn btn-tertiary">Acessar</a>
+                        </div>
+                    </div>
+                    <div class="content-card" style="background-image: url('https://i.imgur.com/s6wJ4bX.jpg');">
+                         <div class="card-overlay">
+                            <h4>Ecossistema</h4>
+                            <a href="#" class="btn btn-tertiary">Acessar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Comunidade -->
-            <div class="footer-column">
+        <section class="quote-section">
+            <div class="container quote-layout">
+                <div class="quote-image">
+                    <img src="https://i.imgur.com/J1k3L4Y.png" alt="Pessoa afagando um cachorro">
+                </div>
+                <div class="quote-text">
+                    <blockquote>
+                        “Podemos julgar o coração de um homem pela forma como ele trata os animais.”
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="developers-section">
+            <div class="container">
+                <h3 class="developers-title">DESENVOLVEDORES</h3>
+                <div class="developers-grid">
+                    <div class="developer-profile">
+                        <img src="https://i.imgur.com/C3aM5N9.png" alt="Jullya Karoline">
+                        <p class="dev-name">Jullya Karoline</p>
+                        <p class="dev-role">Pesquisadora e Designer</p>
+                    </div>
+                    <div class="developer-profile">
+                        <img src="https://i.imgur.com/dK5Zf5W.png" alt="Kailia Santana">
+                        <p class="dev-name">Kailia Santana</p>
+                        <p class="dev-role">Programadora e Designer</p>
+                    </div>
+                    <div class="developer-profile">
+                        <img src="https://i.imgur.com/uNf7k2H.png" alt="Isabelly Loenna">
+                        <p class="dev-name">Isabelly Loenna</p>
+                        <p class="dev-role">Programadora</p>
+                    </div>
+                    <div class="developer-profile">
+                        <img src="https://i.imgur.com/jW5L6f7.png" alt="Ricardo Yuji">
+                        <p class="dev-name">Ricardo Yuji</p>
+                        <p class="dev-role">Programador</p>
+                    </div>
+                    <div class="developer-profile">
+                        <img src="https://i.imgur.com/A6v6hJt.png" alt="Joanna Vitória">
+                        <p class="dev-name">Joanna Vitória</p>
+                        <p class="dev-role">Programadora</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta-section">
+            <div class="container">
+                <h3>Missão ecológica ativada, clique e jogue!</h3>
+                <a href="#" class="btn btn-secondary btn-large">Jogue!</a>
+            </div>
+        </section>
+
+    </main>
+    
+    <div class="feedback-float">
+        <a href="#">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/question-mark.png" alt="Ícone de ajuda">
+        </a>
+        <span>Feedback</span>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-layout">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/leaf.png" alt="Folha Branca" class="logo-icon">
+                    <span>EcoSeed</span>
+                </a>
+            </div>
+            <div class="footer-col">
                 <h4>Comunidade</h4>
-                <a href="#">Sobre nós</a>
-                <a href="#">Entre em contato</a>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Comunidades</a></li>
+                    <li><a href="#">Ideias</a></li>
+                </ul>
             </div>
-
-            <!-- Suporte -->
-            <div class="footer-column">
+            <div class="footer-col">
                 <h4>Suporte</h4>
-                <a href="#">Centro de ajuda</a>
-                <a href="#">Perguntas frequentes</a>
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Fale conosco</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
             </div>
-
-            <!-- Newsletter -->
-            <div class="footer-column newsletter">
-                <h4>Mantenha-se atualizado</h4>
-                <input type="email" placeholder="Digite seu e-mail...">
-                <button>Enviar</button>
+            <div class="footer-col">
+                <h4>Conecte-se conosco</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter--v1.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram"></a>
+                </div>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoSeed. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
