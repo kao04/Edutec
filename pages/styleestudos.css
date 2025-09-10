@@ -1,0 +1,89 @@
+/* ==========================================================================
+   1. Reset Básico e Configurações Globais
+   ... (código completo de todas as seções anteriores) ...
+   ========================================================================== */
+
+/* ==========================================================================
+   ... (Todas as seções de 2 a 11) ...
+   ========================================================================== */
+
+/* ==========================================================================
+   12. ESTILOS PÁGINA ESTUDOS
+   ========================================================================== */
+   .hero-section-estudos { 
+    height: 50vh; 
+    min-height: 400px; 
+    background-image: url('https://i.imgur.com/t9P8Y7X.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+    padding: 0; 
+}
+
+.study-content-section {
+    padding: 60px 0;
+}
+
+.intro-phrase {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px 60px; /* 80px de espaço vertical, 60px horizontal */
+    align-items: center;
+}
+
+.mindmap-card {
+    text-align: center;
+}
+
+.mindmap-card img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.card-caption {
+    margin-top: 15px;
+    font-weight: 500;
+    color: var(--medium-gray);
+}
+
+.video-card {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.video-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.btn-watch-video {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(64, 192, 87, 0.85); /* Verde com transparência */
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+}
+
+.btn-watch-video:hover {
+    background-color: rgba(64, 192, 87, 1);
+}
