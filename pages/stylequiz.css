@@ -82,7 +82,6 @@ p {
   padding: 15px 40px;
 }
 
-/* Cabeçalho */
 .header {
   padding: 20px 0;
   width: 100%;
@@ -203,7 +202,6 @@ p {
   text-align: center;
   padding: 60px 20px;
   min-height: calc(100vh - 220px);
-  /* Ajusta a altura para centralizar entre header e footer */
 }
 
 .quiz-container {
