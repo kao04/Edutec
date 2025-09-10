@@ -105,7 +105,7 @@ p {
 .hero-section-estudos { 
     height: 50vh; 
     min-height: 400px; 
-    background-image: url('https://i.imgur.com/t9P8Y7X.jpg'); 
+    background-image: url('../imgs/estudos/fundolapiz.png'); 
     background-size: cover; 
     background-position: center; 
     position: relative; 
