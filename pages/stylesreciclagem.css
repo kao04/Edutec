@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. Reset Básico e Configurações Globais
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -70,11 +67,6 @@ p {
 }
 
 
-/* ==========================================================================
-   2. Estilos Comuns (Botões, Cabeçalho, Rodapé, etc.)
-   ========================================================================== */
-
-/* Botões */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -183,7 +175,6 @@ p {
     color: #e2e6ea;
 }
 
-/* Rodapé */
 .footer {
     background-color: var(--dark-gray);
     color: var(--white);
@@ -246,7 +237,6 @@ p {
     font-size: 0.9rem;
 }
 
-/* Ícone Flutuante */
 .feedback-float {
     position: fixed;
     bottom: 30px;
@@ -278,7 +268,6 @@ p {
     color: var(--medium-gray);
 }
 
-/* Seção de Conteúdos (Reutilizável) */
 .content-section {
     padding-top: 80px;
 }
@@ -315,9 +304,6 @@ p {
 }
 
 
-/* ==========================================================================
-   3. ESTILOS PÁGINA INICIAL
-   ========================================================================== */
 .hero-section {
     background-color: var(--white);
     padding: 60px 0;
@@ -501,10 +487,6 @@ p {
     margin-bottom: 2rem;
 }
 
-
-/* ==========================================================================
-   4. ESTILOS PÁGINA ENERGIAS RENOVÁVEIS
-   ========================================================================== */
 .hero-section-energias {
     height: 60vh;
     min-height: 500px;
@@ -596,9 +578,6 @@ p {
     font-size: 1.25rem;
 }
 
-/* ==========================================================================
-   6. ESTILOS PÁGINA RECICLAGEM
-   ========================================================================== */
 .hero-section-reciclagem {
     height: 60vh;
     min-height: 500px;

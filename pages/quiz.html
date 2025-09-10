@@ -1,35 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Sustentabilidade</title>
-  <link rel="stylesheet" href="stylequiz.css">
-  <link rel="icon" href="../imgs/home/logoedu.png" type="image/png">
-</head>
-<body>
-  <div class="container">
-    <h1>Quiz Sustentabilidade</h1>
-    <p id="progress">Pergunta 0 de 28</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSeed - Quiz de Sustentabilidade</title>
     
-    <div id="quizBox" class="card hidden">
-      <h2 id="topic"></h2>
-      <p id="question"></p>
-      <div id="options"></div>
-      <p id="feedback"></p>
-      <button id="nextBtn" class="btn hidden">Próxima</button>
-    </div>
+    <link rel="stylesheet" href="stylequiz.css">
+    
+    <link rel="icon" href="../imgs/home/logoedu.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+</head>
 
-    <div id="resultBox" class="card hidden">
-      <h2>Resultado Final</h2>
-      <div id="scoreCards"></div>
-      <p class="total">Total: <span id="score">0</span> / 28</p>
-      <button onclick="location.reload()" class="btn">Reiniciar</button>
-    </div>
+<body>
 
-    <button id="startBtn" class="btn">Começar Quiz</button>
-  </div>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/home/logoedu.png" alt="Folha Verde" class="logo-icon">
+                <span>EcoSeed</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./estudos.html">Estudos</a></li>
+                    <li><a href="./filmes.html">Filmes</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="../index.html">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <script src="quiz.js"></script>
+    <main class="quiz-page-main">
+        <div class="quiz-container">
+            <h1>Quiz de Sustentabilidade</h1>
+            <p id="progress" class="progress-text">Pergunta 0 de 28</p>
+
+            <div id="quizBox" class="card quiz-card hidden">
+                <h2 id="topic" class="quiz-topic"></h2>
+                <p id="question" class="quiz-question"></p>
+                <div id="options" class="quiz-options"></div>
+                <p id="feedback" class="quiz-feedback"></p>
+                <button id="nextBtn" class="btn btn-primary hidden">Próxima</button>
+            </div>
+
+            <div id="resultBox" class="card quiz-card hidden">
+                <h2>Resultado Final</h2>
+                <div id="scoreCards"></div>
+                <p class="total">Total: <span id="score">0</span> / 28</p>
+                <button onclick="location.reload()" class="btn btn-secondary">Reiniciar Quiz</button>
+            </div>
+
+            <button id="startBtn" class="btn btn-primary btn-large">Começar Quiz</button>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container footer-layout">
+            <div class="footer-col">
+                <a href="../index.html" class="logo footer-logo">
+                    <img src="../imgs/home/logoedu.png" alt="Folha Branca" class="logo-icon">
+                    <span>EcoSeed</span>
+                </a>
+            </div>
+            <div class="footer-col">
+                <h4>Comunidade</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Ideias</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="feedback.html">Fale conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Mantenha-se atualizado</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu email">
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="quiz.js"></script>
 </body>
 </html>
