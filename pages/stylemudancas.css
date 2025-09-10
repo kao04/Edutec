@@ -1,0 +1,385 @@
+/* Reset Básico e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #40C057;
+    --dark-gray: #212529;
+    --medium-gray: #6c757d;
+    --light-gray: #f8f9fa;
+    --light-blue-gray: #eef2f5;
+    --white: #ffffff;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Lora', serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--dark-gray);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--medium-gray);
+}
+
+.text-green {
+    color: var(--primary-green);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.title-icon {
+    width: 24px;
+    margin-bottom: 10px;
+}
+
+.text-box-gray {
+    background-color: var(--light-gray);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   Estilos Comuns (Botões, Cabeçalho, Rodapé)
+   ========================================================================== */
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background-color: #36a34a;
+}
+
+.btn-secondary {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+.btn-secondary:hover {
+    background-color: #36a34a;
+}
+
+.btn-tertiary {
+    background-color: var(--white);
+    color: var(--primary-green);
+    font-size: 0.9rem;
+    padding: 8px 20px;
+}
+
+.btn-large {
+    font-size: 1.25rem;
+    padding: 15px 40px;
+}
+
+/* Cabeçalho */
+.header {
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.logo-icon {
+    width: 28px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--medium-gray);
+    font-weight: 600;
+}
+.main-nav a:hover {
+    color: var(--primary-green);
+}
+
+/* Cabeçalho Transparente (para páginas com Hero Image) */
+.header-transparent {
+    position: absolute;
+    background-color: transparent;
+    box-shadow: none;
+}
+.header-transparent .logo {
+    color: var(--white);
+}
+.header-transparent .main-nav a {
+    color: var(--white);
+}
+.header-transparent .main-nav a:hover {
+    color: #e2e6ea;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding-top: 60px;
+}
+.footer-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+.footer-logo span {
+    color: var(--white);
+}
+.footer-col h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+.footer-col ul a {
+    text-decoration: none;
+    color: var(--medium-gray);
+}
+.footer-col ul a:hover {
+    color: var(--white);
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons img {
+    width: 24px;
+}
+.footer-bottom {
+    border-top: 1px solid #495057;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer-bottom p {
+    margin: 0;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+/* Ícone Flutuante */
+.feedback-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    text-align: center;
+    z-index: 999;
+}
+.feedback-float a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.feedback-float img {
+    width: 30px;
+    height: 30px;
+}
+.feedback-float span {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+
+/* Seção de Conteúdos Reutilizável */
+.content-section {
+    padding-top: 80px;
+}
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.content-card {
+    position: relative;
+    height: 350px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.card-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    text-align: center;
+}
+.card-overlay h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+/* ==========================================================================
+   --- ESTILOS PÁGINA INICIAL ---
+   ========================================================================== */
+.hero-section {
+    background-color: var(--white);
+    padding: 60px 0;
+}
+.hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.hero-text { flex: 1; }
+.hero-text h1 { font-size: 3.5rem; font-weight: 700; }
+.hero-text h2 { font-size: 2rem; font-weight: 400; margin-bottom: 2rem; }
+.hero-image { flex: 1; }
+.hero-image img { max-width: 100%; height: auto; }
+.objectives-section { background-color: var(--light-gray); }
+.objectives-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
+.objective-card img { height: 60px; margin-bottom: 1rem; }
+.objective-card h4 { font-size: 1.25rem; color: var(--dark-gray); }
+.ecology-layout { display: flex; align-items: center; gap: 50px; }
+.ecology-image, .ecology-text { flex: 1; }
+.ecology-image img { max-width: 80%; height: auto; }
+.ecology-text h3 { font-size: 2.2rem; }
+.stats-section { background-color: var(--light-gray); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.stat-item img { height: 40px; margin-bottom: 1rem; }
+.stat-number { display: block; font-size: 2rem; font-weight: 700; color: var(--primary-green); }
+.stat-item p { font-size: 0.9rem; }
+.quote-section { background-color: var(--light-blue-gray); }
+.quote-layout { display: flex; align-items: center; gap: 40px; }
+.quote-image { flex: 0 0 40%; }
+.quote-image img { max-width: 100%; }
+.quote-text { flex: 1; }
+.quote-text blockquote { font-family: var(--font-secondary); font-size: 2.2rem; font-style: italic; color: var(--dark-gray); line-height: 1.4; border-left: 5px solid var(--primary-green); padding-left: 30px; }
+.developers-title { text-align: center; font-size: 2.5rem; color: var(--primary-green); letter-spacing: 2px; margin-bottom: 50px; }
+.developers-grid { display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
+.developer-profile { text-align: center; max-width: 150px; }
+.developer-profile img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid var(--primary-green); }
+.dev-name { font-weight: 600; color: var(--dark-gray); margin-bottom: 0; }
+.dev-role { font-size: 0.9rem; color: var(--medium-gray); }
+.final-cta-section { background-color: var(--light-gray); text-align: center; }
+.final-cta-section h3 { font-size: 2.5rem; margin-bottom: 2rem; }
+
+/* ==========================================================================
+   --- ESTILOS PÁGINA ENERGIAS RENOVÁVEIS ---
+   ========================================================================== */
+.hero-section-energias { height: 60vh; min-height: 500px; background-image: url('https://i.imgur.com/gKkP0v9.jpg'); background-size: cover; background-position: center; position: relative; padding: 0; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; text-align: center; color: var(--white); }
+.hero-text-center h1 { font-size: 3.5rem; font-weight: 700; color: var(--white); }
+.hero-text-center p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px auto; color: #e9ecef; }
+.info-section { padding: 60px 0; }
+.info-layout, .info-layout-reverse { display: flex; align-items: center; gap: 60px; }
+.info-layout-reverse { flex-direction: row-reverse; }
+.info-image, .info-text { flex: 1; }
+.info-image img { max-width: 100%; height: auto; }
+.energy-types-section { background-color: var(--light-gray); }
+.main-energy-image { display: block; margin: 0 auto 60px auto; max-width: 85%; height: auto; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.energy-types-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
+.energy-type-card img { height: 50px; margin-bottom: 1rem; }
+.energy-type-card h4 { font-size: 1.25rem; color: var(--dark-gray); }
+
+/* ==========================================================================
+   --- ESTILOS PÁGINA MUDANÇAS CLIMÁTICAS ---
+   ========================================================================== */
+.hero-section-mudancas { height: 60vh; min-height: 500px; background-image: url('https://i.imgur.com/G9C10c1.jpg'); background-size: cover; background-position: center; position: relative; padding: 0; }
+.impacts-section .section-title h3 { text-transform: uppercase; }
+.impacts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+.impacts-grid .text-box-gray { padding: 30px; }
+.impacts-grid img { max-width: 100%; height: auto; }
+.pollution-section { background-color: var(--light-gray); }
+.pollution-layout { display: flex; align-items: center; gap: 40px; }
+.pollution-layout h2 { font-size: 3rem; flex-basis: 30%; font-weight: 700; }
+.pollution-layout p { font-size: 1.1rem; flex-basis: 70%; margin: 0; }
+.stats-chart-section { padding: 80px 0; background-color: var(--white); }
+.stats-chart-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
+.chart-card p { margin-top: 20px; max-width: 250px; margin-left: auto; margin-right: auto; }
+.donut-chart { width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(var(--primary-green) 0% var(--percentage), #e9ecef var(--percentage) 100%); display: flex; justify-content: center; align-items: center; margin: 0 auto; position: relative; }
+.donut-chart::before { content: ''; position: absolute; width: 120px; height: 120px; background: var(--white); border-radius: 50%; }
+.donut-chart span { position: relative; z-index: 1; font-size: 2rem; font-weight: 700; color: var(--dark-gray); }
+.case-study-section { background-color: var(--light-gray); }
+.case-study-layout { display: flex; align-items: center; gap: 50px; }
+.case-study-title { flex-basis: 40%; }
+.case-study-title h4 { font-size: 2rem; font-weight: 600; text-transform: uppercase; }
+.case-study-text { flex-basis: 60%; border-left: 4px solid var(--primary-green); padding-left: 30px; }
+.case-study-text p { font-size: 1.1rem; margin-bottom: 0; }
+.comparison-section { padding-top: 60px; }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.comparison-card { text-align: center; }
+.comparison-card img { width: 100%; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.comparison-card h4 { font-size: 1.5rem; }
+.animal-section { background-color: var(--light-gray); }
+.main-animal-image { display: block; margin: 0 auto 60px auto; max-width: 100%; border-radius: 10px; }
+.animal-info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
+.animal-info-card img { height: 50px; margin-bottom: 1rem; }
+.animal-info-card h4 { font-size: 1.25rem; color: var(--dark-gray); }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Sustentabilidade</title>
+  <link rel="icon" href="../imgs/home/logoedu.png" type="image/png">
+  <link rel="stylesheet" href="stylequiz.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz Sustentabilidade</h1>
+    <p id="progress">Pergunta 0 de 28</p>
+    
+    <div id="quizBox" class="card hidden">
+      <h2 id="topic"></h2>
+      <p id="question"></p>
+      <div id="options"></div>
+      <p id="feedback"></p>
+      <button id="nextBtn" class="btn hidden">Próxima</button>
+    </div>
+
+    <div id="resultBox" class="card hidden">
+      <h2>Resultado Final</h2>
+      <div id="scoreCards"></div>
+      <p class="total">Total: <span id="score">0</span> / 28</p>
+      <button onclick="location.reload()" class="btn">Reiniciar</button>
+    </div>
+
+    <button id="startBtn" class="btn">Começar Quiz</button>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
