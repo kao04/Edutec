@@ -1,102 +1,102 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f9fafb;            /* White - light */
-    color: #111827;                  /* Gray - darker (texto) */
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 600px;
-    width: 100%;
-  }
-  
-  /* Cartões (caixas) */
-  .card {
-    background: #ffffff;             /* White */
-    padding: 20px;
-    border-radius: 14px;
-    margin-top: 20px;
-    box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08); /* Gray shadow suave */
-    border: 1px solid #e5e7eb;       /* Gray - light border */
-  }
-  
-  /* Botões de ação */
-  .btn {
-    background: #2e7d32;             /* Green - normal */
-    color: #ffffff;                   /* White */
-    border: none;
-    padding: 10px 18px;
-    margin-top: 15px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background .2s ease;
-  }
-  .btn:hover { background: #1b5e20; } /* Green - darker */
-  
-  /* Opções de resposta */
-  .option {
-    background: #f3f4f6;             /* Gray - light */
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid #d1d5db;       /* Gray - light border */
-    transition: background .15s ease, border-color .15s ease;
-  }
-  .option:hover {
-    background: #e5e7eb;             /* Gray - light hover */
-    border-color: #cbd5e1;           /* Gray - light active */
-  }
-  
-  /* Feedback de correção */
-  .correct {
-    background: #c8e6c9 !important;  /* Green - light */
-    color: #1b5e20;
-    border: 2px solid #2e7d32;
-  }
-  .incorrect {
-    background: #fca5a5 !important;  /* Red - light */
-    color: #7f1d1d;
-    border: 2px solid #b91c1c;
-  }
-  
-  /* Utilidades */
-  .hidden { display: none; }
-  
-  /* Cards do resumo por tema */
-  #scoreCards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    margin: 15px 0;
-  }
-  
-  .cardScore {
-    background: #f3f4f6;             /* Gray - light */
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #e5e7eb;       /* Gray - light border */
-  }
-  .cardScore h3 {
-    margin: 0 0 6px;
-    font-size: 16px;
-    color: #374151;                   /* Gray - normal */
-  }
-  .cardScore p {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #111827;                   /* Gray - darker */
-  }
-  
-  .total {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #111827;
-  }  
+  font-family: Arial, sans-serif;
+  background: #f9fafb;            
+  color: #111827;                
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+}
+
+
+.card {
+  background: #ffffff;             
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 20px;
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.08); 
+  border: 1px solid #e5e7eb;       
+}
+
+
+.btn {
+  background: #2e7d32;            
+  color: #ffffff;                  
+  border: none;
+  padding: 10px 18px;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.btn:hover { background: #1b5e20; } 
+
+
+.option {
+  background: #f3f4f6;             
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #d1d5db;   
+  transition: background .15s ease, border-color .15s ease;
+}
+.option:hover {
+  background: #e5e7eb;           
+  border-color: #cbd5e1;          
+}
+
+
+.correct {
+  background: #c8e6c9 !important;  
+  color: #1b5e20;
+  border: 2px solid #2e7d32;
+}
+.incorrect {
+  background: #fca5a5 !important; 
+  color: #7f1d1d;
+  border: 2px solid #b91c1c;
+}
+
+
+.hidden { display: none; }
+
+
+#scoreCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.cardScore {
+  background: #f3f4f6;             
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;      
+}
+.cardScore h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #374151;              
+}
+.cardScore p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #111827;                 
+}
+
+.total {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #111827;
+}
