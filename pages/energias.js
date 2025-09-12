@@ -1,4 +1,4 @@
-// Adiciona funcionalidade de smooth scroll para links de âncora
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,12 +9,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efeito de "fade-in" para seções ao rolar a página
+
 const sections = document.querySelectorAll('section');
 
 const options = {
-    root: null, // viewport
-    threshold: 0.1, // 10% da seção visível
+    root: null, 
+    threshold: 0.1, 
     rootMargin: "0px"
 };
 
@@ -30,7 +30,7 @@ const observer = new IntersectionObserver(function(entries, observer) {
 }, options);
 
 sections.forEach(section => {
-    // Não aplica o efeito na primeira seção (hero), que já deve estar visível
+    
     if (!section.classList.contains('hero-section-energias')) {
         section.style.opacity = 0;
         section.style.transform = 'translateY(20px)';
