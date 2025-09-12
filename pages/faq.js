@@ -1,4 +1,3 @@
-// Adiciona funcionalidade de smooth scroll para links de âncora
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,11 +8,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efeito de "fade-in" para seções ao rolar a página
+
 const sections = document.querySelectorAll('section');
 const options = {
-    root: null, // viewport
-    threshold: 0.1, // 10% da seção visível
+    root: null, 
+    threshold: 0.1, 
     rootMargin: "0px"
 };
 
@@ -41,7 +40,6 @@ sections.forEach(section => {
 });
 
 
-// Mensagem de confirmação do formulário de feedback
 const feedbackForm = document.getElementById('feedback-form');
 if (feedbackForm) {
   feedbackForm.addEventListener('submit', function(event) {
@@ -60,27 +58,19 @@ if (feedbackForm) {
 }
 
 
-// ==========================================================================
-// NOVA FUNCIONALIDADE: Lógica para o Acordeão de Perguntas Frequentes (FAQ)
-// ==========================================================================
-
-// Seleciona todos os botões de pergunta
 const faqItems = document.querySelectorAll('.faq-item');
 
-// Se existirem itens de FAQ na página...
 if (faqItems.length > 0) {
     faqItems.forEach(item => {
         const questionButton = item.querySelector('.faq-question');
 
         questionButton.addEventListener('click', () => {
-            // Fecha todos os outros itens abertos para que apenas um fique aberto de cada vez
             faqItems.forEach(otherItem => {
                 if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
                 }
             });
 
-            // Abre ou fecha o item clicado
             item.classList.toggle('active');
         });
     });

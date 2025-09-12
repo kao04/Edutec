@@ -1,4 +1,3 @@
-// Adiciona funcionalidade de smooth scroll para links de âncora
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,11 +8,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Efeito de "fade-in" para seções ao rolar a página
 const sections = document.querySelectorAll('section');
 const options = {
-    root: null, // viewport
-    threshold: 0.1, // 10% da seção visível
+    root: null, 
+    threshold: 0.1, 
     rootMargin: "0px"
 };
 
@@ -29,7 +27,6 @@ const observer = new IntersectionObserver(function(entries, observer) {
 }, options);
 
 sections.forEach(section => {
-    // Não aplica o efeito na primeira seção (hero), que já deve estar visível
     if (!section.classList.contains('hero-section-energias') && 
         !section.classList.contains('hero-section-mudancas') && 
         !section.classList.contains('hero-section-reciclagem') && 
@@ -42,26 +39,16 @@ sections.forEach(section => {
 });
 
 
-// ==========================================================================
-// NOVA FUNCIONALIDADE: Mensagem de confirmação do formulário de feedback
-// ==========================================================================
-
-// Procura pelo formulário na página atual
 const feedbackForm = document.getElementById('feedback-form');
 
-// Se o formulário existir na página...
 if (feedbackForm) {
   
-  // Adiciona um "escutador" para o evento de 'submit'
   feedbackForm.addEventListener('submit', function(event) {
     
-    // 1. Impede o comportamento padrão do formulário (que é recarregar a página)
     event.preventDefault();
     
-    // 2. Encontra o container do formulário
     const formContainer = document.querySelector('.form-container');
     
-    // 3. Cria a mensagem de agradecimento em HTML
     const thankYouMessage = `
       <div class="form-confirmation">
         <h1 class="form-title">Obrigado pelo <span class="text-green">Feedback!</span></h1>
@@ -69,7 +56,6 @@ if (feedbackForm) {
       </div>
     `;
     
-    // 4. Substitui o conteúdo do container pela mensagem de agradecimento
     if (formContainer) {
       formContainer.innerHTML = thankYouMessage;
     }
