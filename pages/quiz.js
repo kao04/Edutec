@@ -1,3 +1,14 @@
+const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioLogado'));
+
+if (!usuarioLogado) {
+    window.location.href = 'login.html';
+}
+
+const userNameDisplay = document.getElementById('userNameDisplay');
+if (userNameDisplay && usuarioLogado) {
+    userNameDisplay.textContent = usuarioLogado.nome;
+}
+
 const QUIZ = [
   {
     topic: "Mudanças Climáticas",
@@ -49,12 +60,10 @@ const QUIZ = [
   }
 ];
 
-
 let questions = [];
 let current = 0;
 let score = 0;
 let scoreByTopic = {};
-
 
 const startBtn = document.getElementById("startBtn");
 const quizBox = document.getElementById("quizBox");
@@ -67,82 +76,147 @@ const nextBtn = document.getElementById("nextBtn");
 const progressEl = document.getElementById("progress");
 const scoreEl = document.getElementById("score");
 const scoreCards = document.getElementById("scoreCards");
-
+const msgSavedEl = document.getElementById("msgSaved");
+const rankingListEl = document.getElementById("rankingList");
 
 function startQuiz(){
-  questions = [];
-  scoreByTopic = {};
-  QUIZ.forEach(t => {
-    scoreByTopic[t.topic] = {right:0, total:t.items.length};
-    t.items.forEach(i => questions.push({...i, topic:t.topic}));
-  });
-  current = 0;
-  score = 0;
-  startBtn.classList.add("hidden");
-  quizBox.classList.remove("hidden");
-  showQuestion();
+    questions = [];
+    scoreByTopic = {};
+    QUIZ.forEach(t => {
+        scoreByTopic[t.topic] = {right:0, total:t.items.length};
+        t.items.forEach(i => questions.push({...i, topic:t.topic}));
+    });
+    current = 0;
+    score = 0;
+    startBtn.classList.add("hidden");
+    quizBox.classList.remove("hidden");
+    resultBox.classList.add("hidden");
+    showQuestion();
 }
 
 function showQuestion(){
-  if(current >= questions.length){
-    return endQuiz();
-  }
-  const q = questions[current];
-  topicEl.textContent = q.topic;
-  qEl.textContent = q.q;
-  optEl.innerHTML = "";
-  feedbackEl.textContent = "";
-  nextBtn.classList.add("hidden");
-  progressEl.textContent = `Pergunta ${current+1} de ${questions.length}`;
+    if(current >= questions.length){
+        return endQuiz();
+    }
+    const q = questions[current];
+    topicEl.textContent = q.topic;
+    qEl.textContent = q.q;
+    optEl.innerHTML = "";
+    feedbackEl.textContent = "";
+    nextBtn.classList.add("hidden");
+    progressEl.textContent = `Pergunta ${current+1} de ${questions.length}`;
 
-  q.options.forEach((op, idx) => {
-    const div = document.createElement("div");
-    div.className = "option";
-    div.textContent = op;
-    div.onclick = () => checkAnswer(idx);
-    optEl.appendChild(div);
-  });
+    q.options.forEach((op, idx) => {
+        const div = document.createElement("div");
+        div.className = "option";
+        div.textContent = op;
+        div.onclick = () => checkAnswer(idx);
+        optEl.appendChild(div);
+    });
 }
 
 function checkAnswer(choice){
-  const q = questions[current];
-  const options = optEl.querySelectorAll(".option");
+    const q = questions[current];
+    const options = optEl.querySelectorAll(".option");
 
-  options.forEach((op, idx) => {
-    op.onclick = null; // trava cliques
-    if (idx === q.answer) op.classList.add("correct");     
-    if (idx === choice && idx !== q.answer) op.classList.add("incorrect"); 
-  });
+    options.forEach((op, idx) => {
+        op.onclick = null; 
+        if (idx === q.answer) op.classList.add("correct");     
+        if (idx === choice && idx !== q.answer) op.classList.add("incorrect"); 
+    });
 
-  if(choice === q.answer){
-    feedbackEl.textContent = "✔ Correto!";
-    score++;
-    scoreByTopic[q.topic].right++;
-  } else {
-    feedbackEl.textContent = "✖ Incorreto!";
-  }
-  nextBtn.classList.remove("hidden");
+    if(choice === q.answer){
+        feedbackEl.textContent = "✔ Correto!";
+        score++;
+        scoreByTopic[q.topic].right++;
+    } else {
+        feedbackEl.textContent = "✖ Incorreto!";
+    }
+    nextBtn.classList.remove("hidden");
 }
 
 function nextQuestion(){
-  current++;
-  showQuestion();
+    current++;
+    showQuestion();
 }
 
-function endQuiz(){
-  quizBox.classList.add("hidden");
-  resultBox.classList.remove("hidden");
-  scoreEl.textContent = score;
+async function endQuiz(){
+    quizBox.classList.add("hidden");
+    resultBox.classList.remove("hidden");
+    scoreEl.textContent = score;
 
-  scoreCards.innerHTML = "";
-  for(const topic in scoreByTopic){
-    const card = document.createElement("div");
-    card.className = "cardScore";
-    card.innerHTML = `<h3>${topic}</h3><p>${scoreByTopic[topic].right} / ${scoreByTopic[topic].total}</p>`;
-    scoreCards.appendChild(card);
-  }
+    scoreCards.innerHTML = "";
+    for(const topic in scoreByTopic){
+        const card = document.createElement("div");
+        card.className = "cardScore";
+        card.innerHTML = `<h3>${topic}</h3><p>${scoreByTopic[topic].right} / ${scoreByTopic[topic].total}</p>`;
+        scoreCards.appendChild(card);
+    }
+
+    await saveScoreToBackend(score);
+    await getRankingFromBackend();
 }
 
+async function saveScoreToBackend(finalScore) {
+    try {
+        const response = await fetch(`${API_URL}/score`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                userId: usuarioLogado.id,
+                score: finalScore
+            })
+        });
+
+        if (response.ok) {
+            msgSavedEl.classList.remove("hidden");
+            msgSavedEl.textContent = "✔ Pontuação salva no servidor!";
+            msgSavedEl.style.color = "green";
+        }
+    } catch (error) {
+        msgSavedEl.classList.remove("hidden");
+        msgSavedEl.textContent = "⚠ Erro ao salvar online.";
+        msgSavedEl.style.color = "red";
+    }
+}
+
+async function getRankingFromBackend() {
+    try {
+        const response = await fetch(`${API_URL}/ranking`, {
+            method: 'GET'
+        });
+        
+        const rankingData = await response.json();
+        
+        if (rankingListEl) {
+            rankingListEl.innerHTML = ""; 
+            
+            rankingData.slice(0, 10).forEach((user, index) => {
+                const li = document.createElement("li");
+                li.style.display = "flex";
+                li.style.justifyContent = "space-between";
+                li.style.padding = "8px";
+                li.style.borderBottom = "1px solid #eee";
+
+                if (user.nome === usuarioLogado.nome) {
+                    li.style.fontWeight = "bold";
+                    li.style.color = "#40C057";
+                }
+
+                li.innerHTML = `
+                    <span>#${index + 1} ${user.nome}</span>
+                    <span>${user.score} pts</span>
+                `;
+                rankingListEl.appendChild(li);
+            });
+        }
+
+    } catch (error) {
+        if (rankingListEl) {
+            rankingListEl.innerHTML = "<li>Erro ao carregar ranking.</li>";
+        }
+    }
+}
 
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", nextQuestion);
