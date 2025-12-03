@@ -5,13 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoSeed - Quiz de Sustentabilidade</title>
-    
+
     <link rel="stylesheet" href="stylequiz.css">
-    
+
     <link rel="icon" href="../imgs/home/logoedu.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .ranking-container {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            text-align: left;
+        }
+
+        .ranking-container h3 {
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .ranking-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ranking-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f8f9fa;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .msg-saved {
+            background-color: #dcfce7;
+            color: #166534;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+            border: 1px solid #bbf7d0;
+        }
+
+        .user-display {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +75,7 @@
                     <li><a href="./estudos.html">Estudos</a></li>
                     <li><a href="./filmes.html">Filmes</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
-                    <li><a href="../index.html">Sobre nós</a></li>
+                    <li><a href="#" onclick="fazerLogout()" style="color: #dc3545; font-weight: bold;">Sair</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,6 +84,9 @@
     <main class="quiz-page-main">
         <div class="quiz-container">
             <h1>Quiz de Sustentabilidade</h1>
+
+            <p class="user-display">Jogador: <strong id="userNameDisplay" class="text-green">...</strong></p>
+
             <p id="progress" class="progress-text">Pergunta 0 de 28</p>
 
             <div id="quizBox" class="card quiz-card hidden">
@@ -48,15 +99,27 @@
 
             <div id="resultBox" class="card quiz-card hidden">
                 <h2>Resultado Final</h2>
+
+                <div id="msgSaved" class="msg-saved hidden"></div>
+
                 <div id="scoreCards"></div>
                 <p class="total">Total: <span id="score">0</span> / 28</p>
-                <button onclick="location.reload()" class="btn btn-secondary">Reiniciar Quiz</button>
+
+                <div class="ranking-container">
+                    <h3>🏆 Top 10 Jogadores</h3>
+                    <ul id="rankingList" class="ranking-list">
+                        <li>Carregando ranking...</li>
+                    </ul>
+                </div>
+
+                <button onclick="location.reload()" class="btn btn-secondary" style="width:100%; margin-top:20px;">Jogar
+                    Novamente</button>
             </div>
 
             <button id="startBtn" class="btn btn-primary btn-large">Começar Quiz</button>
         </div>
     </main>
-    
+
     <footer class="footer">
         <div class="container footer-layout">
             <div class="footer-col">
@@ -86,6 +149,7 @@
         </div>
     </footer>
 
+    <script src="auth.js"></script>
     <script src="quiz.js"></script>
 </body>
 

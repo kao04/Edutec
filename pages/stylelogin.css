@@ -1,0 +1,27 @@
+
+        /* Estilos específicos para centralizar o formulário */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: var(--light-gray);
+        }
+        .auth-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .auth-card h2 { color: var(--primary-green); margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input { 
+            width: 100%; padding: 10px; 
+            border: 1px solid #ddd; border-radius: 5px; 
+        }
+        .auth-link { margin-top: 20px; display: block; color: var(--medium-gray); }
+        .auth-link a { color: var(--primary-green); font-weight: bold; text-decoration: none; }
