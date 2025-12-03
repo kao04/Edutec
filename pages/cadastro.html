@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - EcoSeed</title>
+    <link rel="icon" href="../imgs/home/logoedu.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: var(--light-gray);
+        }
+        .auth-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .auth-card h2 { color: var(--primary-green); margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input { 
+            width: 100%; padding: 10px; 
+            border: 1px solid #ddd; border-radius: 5px; 
+        }
+        .auth-link { margin-top: 20px; display: block; color: var(--medium-gray); }
+        .auth-link a { color: var(--primary-green); font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../imgs/home/logoedu.png" alt="Folha Verde" class="logo-icon">
+                <span>EcoSeed</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Crie sua conta</h2>
+            <form onsubmit="cadastrarUsuario(event)">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="********">
+                </div>
+                
+                <p id="msgErro" style="display:none;"></p>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Cadastrar</button>
+            </form>
+
+            <span class="auth-link">
+                Já tem conta? <a href="login.html">Faça Login</a>
+            </span>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

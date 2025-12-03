@@ -1,3 +1,5 @@
+// AVISO: A constante API_URL já vem do arquivo auth.js, não precisamos declarar de novo.
+
 const usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioLogado'));
 
 if (!usuarioLogado) {
